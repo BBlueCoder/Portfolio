@@ -103,6 +103,9 @@ window.addEventListener('resize', function() {
     }
 });
 
+const openSidebarButton = document.getElementById("show-sidebar-icon")
+const closeSidebarButton = document.getElementById("close-sidebar-icon")
+
 function showSidebar(){
     document.getElementsByClassName('sidebar')[0].classList.add('active');
 }
@@ -110,3 +113,6 @@ function showSidebar(){
 function hideSidebar(){
     document.getElementsByClassName('sidebar')[0].classList.remove('active');
 }
+
+openSidebarButton.onclick = showSidebar
+closeSidebarButton.onclick = hideSidebar

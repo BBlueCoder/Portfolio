@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <title>BBlueCoder</title>
-    <script src="index.js"></script>
+    
     <link rel="icon" href="imgs/icon.png" type="image/icon type">
 </head>
 
@@ -34,7 +34,7 @@
         </div>
     </nav>
     <div class="sidebar">
-        <a href="javascript:void(0);" class="close" onclick="hideSidebar()">
+        <a href="javascript:void(0);" id="close-sidebar-icon" class="close">
             <span class="material-symbols-outlined">
                 close
             </span>
@@ -57,7 +57,7 @@
     <div class="menu">
         <div class="navbar">
             <div class="container">
-                <a href="javascript:void(0);" onclick="showSidebar()">
+                <a href="javascript:void(0);" id="show-sidebar-icon">
                     <span class="material-symbols-outlined">
                         menu
                     </span>
@@ -258,6 +258,8 @@
             </div>
         </div>
     </div>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
