@@ -1,4 +1,4 @@
-name: CI
+name: Deploy website to AWS S3
 on:
   push:
     branches:
@@ -8,7 +8,7 @@ on:
       - master
 
 jobs:
-  upload:
+  deploy:
     name: check-code-and-upload
     runs-on: ubuntu-latest
 
@@ -41,3 +41,26 @@ jobs:
         with:
           name: eslint-report.html
           path: eslint-report.html
+
+      - name: Build Website
+        run: npm run build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-3
+          
+      - name: Sync files to AWS S3
+        run: |
+            aws s3 sync ./dest s3://www.bbluecoder.com --delete
+        env:
+          AWS_DEFAULT_REGION: eu-west-3
+
+      - name: Create CloudFront Invalidation
+        run: |
+          aws configure set preview.cloudfront true
+          aws cloudfront create-invalidation --distribution-id E22OVPWO9N88UF --paths "/*"
+        env:
+          AWS_DEFAULT_REGION: eu-west-3

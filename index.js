@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     jsonData.forEach((project) => {
 
-
         const projectCard = document.createElement('div');
         projectCard.className = 'project-card col-12-xs col-3-md';
 
@@ -62,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
         project.tech_stack_icons.forEach((iconUrl) => {
+            
             const iconImage = document.createElement('img');
             iconImage.src = iconUrl;
             techStackIcons.appendChild(iconImage);
