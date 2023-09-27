@@ -1,0 +1,36 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  upload:
+    name: check-code-and-upload
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3.5.2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.5.2
+        with:
+          node-version: 18.x
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run CSSlint
+        run: npm run csslint
+
+      - name: Upload test coverage
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: result.txt
+          path: result.txt
+      
+    
