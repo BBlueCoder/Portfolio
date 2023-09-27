@@ -4,11 +4,15 @@
   "description": "A portfolio ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint":"npx eslint . --fix  --format node_modules/eslint-html-reporter/reporter.js --output-file eslint-report.html",
+    "csslint": "csslint . > result.txt"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-html-reporter": "^0.7.4",
     "gulp": "^4.0.2",
     "gulp-sass": "^5.1.0",
     "sass": "^1.68.0"

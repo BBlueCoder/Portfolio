@@ -1,68 +1,68 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
 
     const jsonData = [
         {
-            "name": "ViDown",
-            "image": "imgs/projects/vidown_img.png",
-            "github_url": "https://github.com/BBlueCoder/ViDown",
-            "tech_stack_icons": [
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+            'name': 'ViDown',
+            'image': 'imgs/projects/vidown_img.png',
+            'github_url': 'https://github.com/BBlueCoder/ViDown',
+            'tech_stack_icons': [
+                'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg',
+                'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg'
             ]
         },
         {
-            "name": "Cloud Castle API",
-            "image": "imgs/projects/cloud_castle_api.png",
-            "github_url": "https://github.com/BBlueCoder/Cloud-Castle-API",
-            "tech_stack_icons": [
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+            'name': 'Cloud Castle API',
+            'image': 'imgs/projects/cloud_castle_api.png',
+            'github_url': 'https://github.com/BBlueCoder/Cloud-Castle-API',
+            'tech_stack_icons': [
+                'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+                'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg'
             ]
         },
         {
-            "name": "YouDownloaderLib",
-            "image": "imgs/projects/you_download_lib.png",
-            "github_url": "https://github.com/RaIsseMa/YouDownloaderDemo",
-            "tech_stack_icons": [
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
-                "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+            'name': 'YouDownloaderLib',
+            'image': 'imgs/projects/you_download_lib.png',
+            'github_url': 'https://github.com/RaIsseMa/YouDownloaderDemo',
+            'tech_stack_icons': [
+                'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg',
+                'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg'
             ]
         }
     ];
 
-    const projectsContainer = document.getElementById("projects-container");
+    const projectsContainer = document.getElementById('projects-container');
 
     jsonData.forEach((project) => {
 
 
-        const projectCard = document.createElement("div");
-        projectCard.className = "project-card col-12-xs col-3-md";
+        const projectCard = document.createElement('div');
+        projectCard.className = 'project-card col-12-xs col-3-md';
 
-        const githubLink = document.createElement("a");
+        const githubLink = document.createElement('a');
         githubLink.href = project.github_url;
-        githubLink.target = "_blank"; 
+        githubLink.target = '_blank'; 
 
 
-        const projectImage = document.createElement("img");
+        const projectImage = document.createElement('img');
         projectImage.src = project.image;
 
 
-        const overlay = document.createElement("div");
-        overlay.className = "overlay";
+        const overlay = document.createElement('div');
+        overlay.className = 'overlay';
 
 
-        const projectName = document.createElement("div");
-        projectName.className = "project-name";
-        const projectNameText = document.createElement("h3");
+        const projectName = document.createElement('div');
+        projectName.className = 'project-name';
+        const projectNameText = document.createElement('h3');
         projectNameText.textContent = project.name;
         projectName.appendChild(projectNameText);
 
-        const techStackIcons = document.createElement("div");
-        techStackIcons.className = "tech-stack-icons";
+        const techStackIcons = document.createElement('div');
+        techStackIcons.className = 'tech-stack-icons';
 
     
         project.tech_stack_icons.forEach((iconUrl) => {
-            const iconImage = document.createElement("img");
+            const iconImage = document.createElement('img');
             iconImage.src = iconUrl;
             techStackIcons.appendChild(iconImage);
         });
@@ -104,9 +104,9 @@ window.addEventListener('resize', function() {
 });
 
 function showSidebar(){
-    document.getElementsByClassName("sidebar")[0].classList.add('active');
+    document.getElementsByClassName('sidebar')[0].classList.add('active');
 }
 
 function hideSidebar(){
-    document.getElementsByClassName("sidebar")[0].classList.remove("active");
+    document.getElementsByClassName('sidebar')[0].classList.remove('active');
 }
