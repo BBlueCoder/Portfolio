@@ -4,12 +4,13 @@
   "description": "A portfolio ",
   "main": "index.js",
   "scripts": {
-    "lint":"npx eslint . --fix  --format node_modules/eslint-html-reporter/reporter.js --output-file eslint-report.html",
+    "lint": "npx eslint . --fix  --format node_modules/eslint-html-reporter/reporter.js --output-file eslint-report.html",
     "csslint": "csslint . > result.txt"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "csslint": "^1.0.5",
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-html-reporter": "^0.7.4",
