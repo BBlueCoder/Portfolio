@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+}
+
+@import 'variables';
+@import 'breakpoints';
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    background-color: $background
+}
+
+.invisible {
+    display: none;
+}
+
+
+
+.rounded-container {
+
+    img {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: $primary solid 3px;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            filter: drop-shadow(3px 0px 30px $primary);
+        }
+    }
+}
+
+.bio {
+    padding: 40px;
+
+    h1 {
+        color: $stroke;
+        font-weight: 900;
+    }
+}
+
+.highlight {
+    color: $primary;
+    font-family: 'Skranji', cursive;
+}
+
+@import 'grid';
+
+.header {
+    margin-top: 50px;
+}
+
+@include sm {
+    .header {
+        .row {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+@import 'navbar';
+@import 'sidebar';
+@import 'aboutme';
+@import 'projectcard';
+
+.skills {
+    margin-top: 20px;
+    padding: 20px;
+
+    .skill {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        span {
+            color: $textColor;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.resume {
+    margin-top: 20px;
+
+    a {
+        padding: 20px;
+        text-decoration: none;
+        background-color: $primary;
+        color: $stroke;
+        border-radius: 10px;
+
+        &:hover {
+            color: $textColor;
+        }
+    }
+}
+
+.contacts {
+
+    margin-top: 20px;
+    position: relative;
+    border-radius: 10px;
+    padding: 40px;
+    background-image: linear-gradient(#ffc6c7, rgba(255,0,0,0));
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(black, rgba(255,0,0,0));
+        border-radius: 10px;
+        opacity: 0.2;
+    }
+
+    .row {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        position:relative;
+        a {
+            text-decoration: none;
+
+            &:hover {
+                i {
+                    color: $primary;
+                }
+            }
+        }
+
+        i {
+            font-size: 38px;
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .contacts {
+        i {
+            display: none;
+        }
+    }
+
+    .skills {
+        .skill {
+            flex-direction: column;
+        }
+    }
+}

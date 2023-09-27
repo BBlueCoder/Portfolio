@@ -1,0 +1,17 @@
+.about-me {
+    padding: 40px;
+
+    .key {
+        color: $primary;
+    }
+
+    h3 {
+        color: $stroke;
+    }
+
+    p {
+        font-weight: 300;
+        color: $textColor;
+        line-height: 1.3;
+    }
+}

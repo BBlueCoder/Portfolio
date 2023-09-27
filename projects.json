@@ -1,0 +1,20 @@
+[
+    {
+        "name": "ViDown",
+        "image": "imgs/projects/vidown_img.png",
+        "github_url": "https://github.com/BBlueCoder/ViDown",
+        "tech_stack_icon": [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+        ]
+    },
+    {
+        "name": "ViDown",
+        "image": "imgs/projects/vidown_img.png",
+        "github_url": "https://github.com/BBlueCoder/ViDown",
+        "tech_stack_icon": [
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
+            "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+        ]
+    }
+]

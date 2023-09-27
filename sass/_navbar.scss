@@ -1,0 +1,59 @@
+%flex-layout {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.navbar {
+    @extend %flex-layout;
+    padding: 20px;
+
+    .container {
+        @extend %flex-layout;
+    }
+
+    .navbar-title {
+        font-weight: bold;
+        font-family: 'Skranji', cursive;
+        font-size: 48px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: $stroke;
+        font-weight: bold;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    li {
+        float: left;
+        margin-left: 20px;
+
+        &:hover {
+            border-bottom: $primary solid 2px;
+        }
+
+        &:hover a {
+            transform: translateY(-3px);
+        }
+    }
+
+    li .icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .navbar-responsive {
+        display: none;
+    }
+}

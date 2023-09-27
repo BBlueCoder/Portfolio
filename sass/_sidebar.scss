@@ -1,0 +1,75 @@
+.menu {
+   a {
+    color: $stroke;
+    margin-left: 20px;
+
+    &:hover {
+        i {
+            color: $primary;
+        }
+    }
+   } 
+}
+
+.sidebar {
+    width: 0;
+    height: 100%;
+    padding-top: 10px;
+    position: fixed;
+    background-color: $secondary;
+    transition: all 0.3s ease-in-out;
+    left: -300px;
+    z-index: 10;
+
+    &.active {
+        width: 100%;
+        left: 0;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: $stroke;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    .navbar-title {
+        font-weight: bold;
+        font-family: 'Skranji', cursive;
+        font-size: 36px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: $stroke;
+    }
+
+
+    li {
+        float: none;
+        display: block;
+        padding-top: 10px;
+    }
+
+    ul a {
+        text-decoration: none;
+        color: $stroke;
+        font-weight: bold;
+        display: block;
+        transition: transform 0.3s ease;
+
+        &:hover{
+            color: $primary;
+        }
+    }
+}
+
+@include md{
+    .menu {
+        display: none;
+    }
+}
