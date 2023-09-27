@@ -54,7 +54,7 @@ jobs:
           
       - name: Sync files to AWS S3
         run: |
-            aws s3 sync ./dest s3://www.bbluecoder.com --delete
+            aws s3 sync ./dist s3://www.bbluecoder.com --delete
         env:
           AWS_DEFAULT_REGION: eu-west-3
 
