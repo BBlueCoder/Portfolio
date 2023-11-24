@@ -5,13 +5,15 @@
         color: $primary;
     }
 
-    h3 {
+    .title {
         color: $stroke;
+        padding-bottom: 3px;
+        border-bottom: $primary solid 2px;
     }
 
     p {
-        font-weight: 300;
+        font-weight:800;
         color: $textColor;
-        line-height: 1.3;
+        line-height: 1.5;
     }
 }

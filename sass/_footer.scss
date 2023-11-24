@@ -1,0 +1,37 @@
+.footer {
+    border-top: 1px solid rgba(89, 74, 78, .2);
+    padding: 40px 0;
+    color: $textColor;
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    .title {
+        color: $stroke;
+        padding-bottom: 3px;
+        border-bottom: $primary solid 2px;
+    }
+
+    a {
+        text-decoration: none;
+        margin-left: 20px;
+        &:hover {
+            i {
+                color: $primary;
+            }
+        }
+    }
+
+    i {
+        font-size: 24px;
+    }
+
+    svg {
+        height: 20px;
+
+        &:hover {
+            fill: $primary;
+        }
+    }
+}

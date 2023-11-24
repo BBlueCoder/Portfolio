@@ -15,13 +15,15 @@ body {
     display: none;
 }
 
-
+.text-center {
+    text-align: center;
+}
 
 .rounded-container {
 
-    img {
-        height: 200px;
-        width: 200px;
+    img {   
+        height: 300px;
+        width: 300px;
         border-radius: 50%;
         object-fit: cover;
         border: $primary solid 3px;
@@ -38,7 +40,38 @@ body {
 
     h1 {
         color: $stroke;
-        font-weight: 900;
+        font-weight: 800;
+    }
+
+    p {
+        font-weight:800;
+        color: $textColor;
+        line-height: 1.5;
+    }
+}
+
+.time-line{
+    border-left: 2px solid #ccc;
+
+    div{
+        line-height: 1.7;
+    }
+
+    div::before{
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 3px solid #ddd;
+        position: relative;
+        left: -28px;
+        top: 27px;
+    }
+
+    h2{
+        color: $primary;
     }
 }
 
@@ -65,6 +98,9 @@ body {
 @import 'sidebar';
 @import 'aboutme';
 @import 'projectcard';
+@import 'collapsible';
+@import 'techstackitem';
+@import 'footer';
 
 .skills {
     margin-top: 20px;
@@ -103,51 +139,19 @@ body {
     }
 }
 
-.contacts {
-
-    margin-top: 20px;
-    position: relative;
-    border-radius: 10px;
-    padding: 40px;
-    background-image: linear-gradient(#ffc6c7, rgba(255,0,0,0));
-
-    .overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-image: linear-gradient(black, rgba(255,0,0,0));
-        border-radius: 10px;
-        opacity: 0.2;
-    }
-
-    .row {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        position:relative;
-        a {
-            text-decoration: none;
-
-            &:hover {
-                i {
-                    color: $primary;
-                }
+@media screen and (max-width: 720px) {
+    .footer {
+        .row{
+            div {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
             }
         }
-
-        i {
-            font-size: 38px;
-        }
-    }
-}
-
-@media screen and (max-width: 720px) {
-    .contacts {
-        i {
-            display: none;
-        }
+        
+        // .social-links {
+        //     // display: none;
+        // }
     }
 
     .skills {

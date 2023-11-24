@@ -8,6 +8,13 @@
             color: $primary;
         }
     }
+
+    svg {
+
+        &:hover {
+            fill: $primary;
+        }
+    }
    } 
 }
 

@@ -1,0 +1,25 @@
+.tech-stack-item {
+    padding: 5px;
+    border: 2px solid $stroke;
+    border-radius: 5px;
+    box-shadow: $primary 0px 5px 15px;
+
+    
+    .tech-stack-icon {
+        height: 24px;
+        width: 24px;
+        margin-left: 20px;
+        position: absolute;
+    }
+
+
+}
+
+.para {
+    color: $textColor;
+    font-weight:1000;
+    text-align: center;
+    padding-right: 100px;
+    padding-left: 100px;
+    font-style: italic;
+}
